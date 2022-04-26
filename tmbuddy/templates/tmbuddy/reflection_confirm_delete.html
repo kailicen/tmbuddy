@@ -1,0 +1,25 @@
+{% extends "tmbuddy/base.html" %}{% load crispy_forms_tags %} {% block content %}
+<div class="d-flex flex-column p-2">
+  <form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">Delete Self-reflection</legend>
+      <p class="text-muted">Are you sure you want to delete the reflection --</p>
+      <div class="m-5">
+        <small class="text-muted">Meeting of {{ object.meeting_date }}</small>
+          <p>Role: {{ object.role }}
+          <br/>Score: {{ object.score }}</p>
+          {{ object.content | linebreaksbr }}
+      </div>
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+      <a
+        class="btn btn-outline-secondary"
+        href="{% url 'user-reflection' object.user.username %}"
+        >Cancel</a
+      >
+    </div>
+  </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "tmbuddy/base.html" %} {% block content %}
+<div class="d-flex flex-column p-2 restraint-flex">
+  <h5>Record progress</h5>
+  <a class="btn btn-lg btn-info btn-block m-2" href="{% url 'feedback-create' %}">Buddy Feedback</a>
+  <a class="btn btn-lg btn-info btn-block m-2" href="{% url 'reflection-create' %}">Self Reflection</a>
+  <hr class="dotted" />
+<h5>Other links</h5>
+  <a class="btn btn-lg btn-light btn-block m-2" href="{% url 'tmbuddy-tm-fam' %}">TM Family</a>
+  <a class="btn btn-lg btn-light btn-block m-2" href="{% url 'tmbuddy-resources' %}">Resources</a>
+</div>
+{% endblock content %}

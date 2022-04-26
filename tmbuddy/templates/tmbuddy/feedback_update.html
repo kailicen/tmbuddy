@@ -1,0 +1,14 @@
+{% extends "tmbuddy/base.html" %}{% load crispy_forms_tags %}{% block content %}
+<div class="d-flex flex-column p-2 restraint-flex">
+  <form method="POST">
+    <div class="info-box p-2 mb-3 rounded">
+      <h7>{{ user_profile.buddy }}<br>{{ user_profile.buddy.profile.goal }}</h7>
+      </div>
+    {% csrf_token %}
+    <fieldset class="form-group">{{ form|crispy }}</fieldset>
+    <div class="form-group text-center">
+      <button class="btn btn-outline-info" type="submit">Update</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
