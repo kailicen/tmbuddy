@@ -12,11 +12,11 @@ nav a.navbar-brand {
   font-weight: 600;
 }
 nav a.navbar-brand:hover {
-  color: #5bc0de !important;
+  color: #17a2b7 !important;
 }
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: #5bc0de !important;
+  background-color: #17a2b7 !important;
 }
 .dropdown-item {
   color: rgba(0, 0, 0, 0.55) !important;
@@ -33,7 +33,7 @@ hr {
 }
 
 .info-box {
-  background-color: #5bc0de;
+  background-color: #17a2b7;
   color:aliceblue;
   width: 100%;
 }
@@ -43,11 +43,11 @@ hr {
 }
 
 a.btn-edit {
-  color: rgba(91, 192, 222, 0.75);
+  color: rgba(23, 162, 183, 0.75);
 }
 a.btn-edit:hover {
   text-decoration: underline;
-  color: rgba(91, 192, 222, 0.95);
+  color: rgba(23, 162, 183, 0.95);
 }
 a.btn-delete {
   color: rgba(217, 83, 79, 0.75);

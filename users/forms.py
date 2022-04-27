@@ -29,7 +29,8 @@ class UserUpdateForm(forms.ModelForm):
 
 
 class ProfileUpdateForm(forms.ModelForm):
-    buddy = forms.ModelChoiceField(queryset=User.objects.exclude(username='admin').order_by('username'))
+    buddy = forms.ModelChoiceField(required=False, queryset=User.objects.exclude(username='admin').order_by('username'))
+    goal = forms.CharField(required=False)
     class Meta:
         model = Profile
         fields = ['goal', 'buddy']

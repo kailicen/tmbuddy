@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import ModelForm
+from django.utils.translation import gettext_lazy as _
 
 from .models import SelfReflection, BuddyFeedback
 
@@ -16,6 +17,9 @@ class SelfReflectionForm(ModelForm):
         widgets = {
             'meeting_date': DateInput(),
         }
+        labels = {
+            'content': _('Comment'),
+        }
 
 
 class BuddyFeedbackForm(ModelForm):
@@ -25,4 +29,7 @@ class BuddyFeedbackForm(ModelForm):
         fields = ['meeting_date', 'role', 'score', 'content']
         widgets = {
             'meeting_date': DateInput(),
+        }
+        labels = {
+            'content': _('Comment'),
         }
